@@ -1,0 +1,18 @@
+# Python pycache
+__pycache__/
+*.pyc
+
+# Dataset (Do not upload large data)
+data/
+WiAR/
+
+# Virtual Environments
+venv/
+env/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
