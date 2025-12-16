@@ -32,34 +32,40 @@ This project uses the **WiAR** dataset.
    git clone https://github.com/YOUR_USERNAME/WiAR-Activity-Recognition.git
    cd WiAR-Activity-Recognition
 
-
 ---
 
-### 4. How to Refactor Your Code (Briefly)
-
-To look truly professional, don't just upload the notebook. Split the code:
-
-1.  **`src/model.py`**: Put the `Attention` class and the `build_model` function here.
-2.  **`src/data_loader.py`**: Put `load_and_preprocess_file`, `make_fixed_length_sequence`, and `augment_data` here.
-3.  **`src/train.py`**: Import functions from the files above, run the data loading loop, and call `model.fit()`.
-
-**If you don't want to refactor right now:**
-1.  Clean up the Jupyter Notebook (remove the long output logs like "Loading files...").
-2.  Save it inside the `notebooks/` folder.
-3.  Upload the structure as described in Section 1.
-
-### 5. Final Checklist Before Pushing
-
-1.  **Remove Secrets:** Ensure no API keys or personal paths (like `/content/drive/`) are hardcoded (use relative paths).
-2.  **Clean Notebook:** In Jupyter, go to `Cell > All Output > Clear` before saving to make the file smaller and cleaner.
-3.  **Images:** Save the Confusion Matrix plot and Accuracy plot from your notebook as PNG files and put them in the `results/` folder so you can link them in the README.
-
-**Git Commands to Upload:**
+## Install Dependencies
+It is recommended to use a virtual environment.
 ```bash
-git init
-git add .
-git commit -m "Initial commit: WiAR Activity Recognition Project"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-git push -u origin main
-   
+pip install -r requirements.txt
+```
+Note: csiread is required to parse Intel CSI format.
+
+
+## 🚀 Usage
+1. Training the Model
+To train the model from scratch, run the training script (assuming you refactored the notebook, otherwise run the notebook directly):
+```bash
+python src/train.py
+```
+
+2. Using the Notebook
+You can interactively explore the data and train the model using the provided notebook:
+```bash
+jupyter notebook notebooks/exploration.ipynb
+```
+
+## 🧠 Model Architecture
+The model follows this pipeline:
+- **Input:** (Batch, 384, 180) - Fixed sequence length of 384 time steps.
+- **Feature Extraction:** 3 layers of Conv1D + BatchNorm + MaxPooling.
+- **Sequence Modeling:** 2 layers of Bi-Directional LSTMs.
+- **Focus:** Custom Attention Layer.
+- **Output:** Dense Layer (Softmax) for 16 classes.
+
+## 📜 Citation
+If you use this code or the WiAR dataset, please cite the original authors:
+Guo, L., Wang, L., et al. "WiAR: A Public Dataset for Wi-Fi-based Activity Recognition."
+
+## 🤝 Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
