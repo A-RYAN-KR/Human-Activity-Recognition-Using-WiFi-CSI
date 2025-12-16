@@ -67,7 +67,7 @@ The model follows this pipeline:
 
 You can interactively explore the data and run the notebook in Google Colab:
 
-[Open in Google Colab]([https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID_HERE](https://colab.research.google.com/drive/1ZFH5k0z5jHekHNPQVA1DxBTKny-FUVSn?usp=sharing))
+[Open in Google Colab](https://colab.research.google.com/drive/1ZFH5k0z5jHekHNPQVA1DxBTKny-FUVSn?usp=sharing)
 
 
 ## 📜 Citation
