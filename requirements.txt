@@ -1,0 +1,9 @@
+tensorflow>=2.15.0
+numpy
+matplotlib
+seaborn
+scipy
+tqdm
+scikit-learn
+pandas
+csiread
