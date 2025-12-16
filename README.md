@@ -63,6 +63,13 @@ The model follows this pipeline:
 - **Focus:** Custom Attention Layer.
 - **Output:** Dense Layer (Softmax) for 16 classes.
 
+## 📓 Google Colab
+
+You can interactively explore the data and run the notebook in Google Colab:
+
+[Open in Google Colab]([https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID_HERE](https://colab.research.google.com/drive/1ZFH5k0z5jHekHNPQVA1DxBTKny-FUVSn?usp=sharing))
+
+
 ## 📜 Citation
 If you use this code or the WiAR dataset, please cite the original authors:
 Guo, L., Wang, L., et al. "WiAR: A Public Dataset for Wi-Fi-based Activity Recognition."
